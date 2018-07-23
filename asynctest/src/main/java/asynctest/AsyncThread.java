@@ -20,7 +20,7 @@ public class AsyncThread implements Runnable{
 		}
 		System.out.println("end");
 //		this.context.dispatch("/begin.jsp");
-		
+		this.context.complete();
 	}
 
 }

@@ -1,4 +1,4 @@
-package testeasync;
+package asynctest;
 
 import java.io.IOException;
 
@@ -13,7 +13,6 @@ public class AsyncServlet extends HttpServlet{
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.sendRedirect("/begin.jsp");
 		AsyncContext asyncContext = req.startAsync();
 		asyncContext.start(new AsyncThread(asyncContext));
 	}
