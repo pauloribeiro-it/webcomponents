@@ -4,7 +4,7 @@
 		<title>Test JSP Page</title>
 	</head>
 	<body>
-	
+		<% out.write("teste"); %><!-- not allowed  because this page is a xml document-->
 	</body>
 </html>
 
