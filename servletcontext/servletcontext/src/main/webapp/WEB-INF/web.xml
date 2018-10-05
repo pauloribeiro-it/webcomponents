@@ -1,0 +1,24 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Servlet Context Example</display-name>
+  <context-param>
+  	<description>First Parameter</description>
+  	<param-name>Param1_Name</param-name>
+  	<param-value>Param1_Value</param-value>
+  </context-param>
+
+  <context-param>
+  	<description>Second Parameter</description>
+  	<param-name>Param2_Name</param-name>
+  	<param-value>Param2_Value</param-value> <!-- Yeah, I don't have any creativity -->
+  </context-param>
+
+  <servlet>
+  	<servlet-name>ServletContextExample</servlet-name>
+  	<servlet-class>servletcontext.ServletContextExample</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletContextExample</servlet-name>
+  	<url-pattern>/servletexample</url-pattern>
+  </servlet-mapping>
+</web-app>
