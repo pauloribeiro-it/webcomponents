@@ -1,0 +1,6 @@
+/pages
+/WEB-INF
+   web.xml
+   /classes (class files) 
+   /lib (JAR archives)
+   /tags (JSP tag files)

@@ -1,0 +1,6 @@
+class loading -> the class loader application will loader the servlet class
+instantiation -> the servlet class is instatiated
+initialisation -> the init method is invoked (when a ServletException occurs then the container gives up to try to init the servlet, but when a 
+						UnavailableException is invoked the container tries again)
+destroy -> the servlet is destroyed when it is unedeployed from the container 
+
