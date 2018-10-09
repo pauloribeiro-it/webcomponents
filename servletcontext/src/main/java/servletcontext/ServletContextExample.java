@@ -29,11 +29,11 @@ public class ServletContextExample extends HttpServlet{
 	}
 	
 	private void printInitParametersServlet(HttpServletResponse resp) throws IOException{
-		Enumeration<String> parametersNames = getInitParameterNames();
+		Enumeration<String> parametersNames = getServletConfig().getServletContext().getInitParameterNames();//getInitParameterNames();
 		String paramName;
 		while(parametersNames.hasMoreElements()){
 			paramName = parametersNames.nextElement();
-			resp.getWriter().write("Param name: "+paramName+"|| Param value = "+getInitParameter(paramName)+"\n");
+			resp.getWriter().write("Param name: "+paramName+"|| Param value = "+getServletConfig().getServletContext().getInitParameter(paramName)+"\n");
 		}
 	}
 }

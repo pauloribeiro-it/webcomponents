@@ -25,4 +25,8 @@
   	<servlet-name>ServletContextExample</servlet-name>
   	<url-pattern>/servletexample</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+  	<listener-class>listeners.InitialisationListener</listener-class>
+  </listener>
 </web-app>
