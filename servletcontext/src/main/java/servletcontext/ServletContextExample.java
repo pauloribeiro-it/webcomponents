@@ -15,12 +15,25 @@ public class ServletContextExample extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ServletContext servletContext =  getServletContext();
-		Enumeration<String> parametersNames = servletContext.getInitParameterNames();
+		printInitParametersApplication(resp, getServletContext());
+		printInitParametersServlet(resp);
+	}
+	
+	private void printInitParametersApplication(HttpServletResponse resp,ServletContext servletContext) throws IOException{
 		String paramName;
+		Enumeration<String> parametersNames = servletContext.getInitParameterNames();
 		while(parametersNames.hasMoreElements()){
 			paramName = parametersNames.nextElement();
 			resp.getWriter().write("Param name: "+paramName+"|| Param value = "+servletContext.getInitParameter(paramName)+"\n");
+		}
+	}
+	
+	private void printInitParametersServlet(HttpServletResponse resp) throws IOException{
+		Enumeration<String> parametersNames = getInitParameterNames();
+		String paramName;
+		while(parametersNames.hasMoreElements()){
+			paramName = parametersNames.nextElement();
+			resp.getWriter().write("Param name: "+paramName+"|| Param value = "+getInitParameter(paramName)+"\n");
 		}
 	}
 }

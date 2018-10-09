@@ -15,6 +15,10 @@
   <servlet>
   	<servlet-name>ServletContextExample</servlet-name>
   	<servlet-class>servletcontext.ServletContextExample</servlet-class>
+  	<init-param>
+  		<param-name>servletcontextexample_name</param-name>
+  		<param-value>servletcontextexample_value</param-value>
+  	</init-param>
   </servlet>
   
   <servlet-mapping>
