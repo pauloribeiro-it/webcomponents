@@ -16,5 +16,6 @@ public class OtherServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("Other servlet - service");
+		System.out.println(req.getCharacterEncoding());
 	}
 }

@@ -16,6 +16,5 @@ public class CommonServlet extends HttpServlet{
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ReqWrapper reqWrapper = new ReqWrapper(req);
 		getServletContext().getRequestDispatcher("/serv2").forward(reqWrapper, resp);
-		System.out.println(resp.isCommitted());
 	}
 }
