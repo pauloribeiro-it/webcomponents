@@ -14,6 +14,14 @@ public class AsyncServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		AsyncContext asyncContext = req.startAsync();
+		asyncContext.addListener(new AsyncronousListener());
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		resp.getWriter().write("before asynctest");
 		asyncContext.start(new AsyncThread(asyncContext));
 	}
 }

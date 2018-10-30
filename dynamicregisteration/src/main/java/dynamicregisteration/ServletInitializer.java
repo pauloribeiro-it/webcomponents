@@ -9,6 +9,8 @@ import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+import javax.servlet.annotation.HandlesTypes;
 
 import proxy.FilterProxy;
 
@@ -20,6 +22,10 @@ public class ServletInitializer implements ServletContainerInitializer {
 		EnumSet<DispatcherType> dispatcherTypes = EnumSet.of(DispatcherType.REQUEST, DispatcherType.INCLUDE);
 		unregisteredFilter.addMappingForUrlPatterns(dispatcherTypes, false, "/unregfilter");
 
+		//adding a regular servlet
+		ServletRegistration unregisteredServlet = ctx.addServlet("unregisteredServlet", UnregisteredServlet.class);
+		unregisteredServlet.addMapping("/unregservlet");
+	
 		//adding a virtual filter created by a proxy using reflection
 		FilterProxy proxy = new FilterProxy();
 		Filter virtualProxy = proxy.createProxy(Filter.class);

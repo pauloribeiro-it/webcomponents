@@ -1,0 +1,11 @@
+JSP life cycle
+jsp creation
+deployment
+validation
+translation
+compilation
+load class (jsp is already translated to a servlet class)
+instantiate
+initialise 
+service
+destruction

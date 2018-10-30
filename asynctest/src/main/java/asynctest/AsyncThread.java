@@ -14,10 +14,11 @@ public class AsyncThread implements Runnable{
 	public void run() {
 		System.out.println("begin");
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		context.dispatch();
 		System.out.println("end");
 //		this.context.dispatch("/begin.jsp");
 		this.context.complete();
