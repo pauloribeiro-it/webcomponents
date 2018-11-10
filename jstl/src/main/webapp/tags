@@ -1,0 +1,17 @@
+<c:out value="xml_value" escapeXml="true/false" default=""></c:out>
+<c:catch var="var_exception"></c:catch>
+<c:set var="" scope="" value=""></c:set>
+<c:set var="" scope="">value</c:set>
+<c:set target="" property="" value=""></c:set>
+<c:set target="" property="">value</c:set>
+<c:if test="" var="" scope="">instructions</c:if>
+<c:choose>
+	<c:when test=""></c:when>
+	<c:otherwise></c:otherwise>
+</c:choose>
+<c:forEach var="" items="" begin="" end="" varStatus="" step=""></c:forEach>
+<c:forTokens items="" delims=""></c:forTokens>
+<c:url value="" context=""></c:url>
+<c:import url="" context="" var=""></c:import>
+<c:redirect url="" context=""></c:redirect>
+<c:param name="" value=""></c:param>
