@@ -84,11 +84,11 @@
     </attribute>
     <dynamic-attributes>true</dynamic-attributes>
   </tag>
-
+-->
   <tag>
     <name>moderation</name>
     <tag-class>mytags.ModerationTag</tag-class>
-    <body-content>JSP</body-content>
+    <body-content>scriptless</body-content>
     <variable>
       <name-from-attribute>datevar</name-from-attribute>
       <variable-class>java.util.Date</variable-class>
@@ -127,5 +127,5 @@
       <type>int</type>
     </attribute>
   </tag>
- -->
+
 </taglib>
