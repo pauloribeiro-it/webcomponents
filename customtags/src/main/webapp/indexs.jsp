@@ -23,6 +23,9 @@
 
 <h2>for Loop</h2>
 
+<mysimpletags:for start="1" end="5" step="1" var="mycount">
+  <p>Counter is ${ mycount } using EL</p>
+</mysimpletags:for>
 
 </body>
 </html>

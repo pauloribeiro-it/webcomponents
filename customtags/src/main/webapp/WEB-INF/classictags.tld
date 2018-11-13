@@ -19,7 +19,7 @@
     </attribute>
     <dynamic-attributes>false</dynamic-attributes>
   </tag>
-<!-- 
+
   <tag>
     <name>include</name>
     <tag-class>mytags.MyIncludeTag</tag-class>
@@ -67,7 +67,7 @@
     </attribute>
     <dynamic-attributes>false</dynamic-attributes>
   </tag>
-
+<!-- 
   <tag>
     <name>selectCountry</name>
     <tag-class>mytags.SelectCountryTag</tag-class>
