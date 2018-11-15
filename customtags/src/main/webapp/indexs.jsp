@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.garnerpress.com/books/scwcd1.4/mytags" prefix="mysimpletags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page import="java.util.*" %>
+<%@ page import="java.util.*,mytags.*" %>
 
 <html>
 <head>
@@ -26,6 +26,28 @@
 <mysimpletags:for start="1" end="5" step="1" var="mycount">
   <p>Counter is ${ mycount } using EL</p>
 </mysimpletags:for>
+<h2>Moderation</h2>
 
+<%
+  /* Get the helper */
+  GuestbookHelper helper = new GuestbookHelper();
+
+  /* Guestbook data: */
+  pageContext.setAttribute("guestdata", helper.getEntries());
+
+  /* Dictionary: */
+  pageContext.setAttribute("sweardictionary", helper.getSwearDictionary());
+
+%>
+
+<table>
+<tr><th>Date</th><th>Message</th></tr>
+<mysimpletags:moderation data="${ guestdata }" replace="${ sweardictionary }" swearlimit="2" datevar="guestdate" textvar="guesttext">
+  <tr>
+    <td><fmt:formatDate value="${ guestdate }" type="both" dateStyle="long" timeStyle="short" /></td>
+    <td>${ guesttext }</td>
+  </tr>
+</mysimpletags:moderation>
+</table>
 </body>
 </html>
